@@ -76,7 +76,7 @@ public class RecursiveMethods {
 	// 	return binarySearch(items, target, 0, items.length -1);
 	// }
 
-	private static int binarySearch(int array[], int key) {
+	public static int binarySearch(int array[], int key) {
 		int arrayLength = array.length;
 		int left = 0;
 		int right = arrayLength - 1;
