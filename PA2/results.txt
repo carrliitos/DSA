@@ -1,0 +1,27 @@
+****************** Test Binary Search Applications Correctness ****************** 
+
+*** Counting the number of occurrences of key ***
+
+Number of occurrences of 1 is 2
+Number of occurrences of 14 is 6
+Number of occurrences of 39 is 3
+Number of occurrences of 7 is 1
+Number of occurrences of 100 is 1
+Number of occurrences of -88 is 1
+Number of occurrences of 16 is 1
+
+*** Finding Predecessor ***
+
+Predecessor of 1 is not defined.
+Predecessor of 0 is not defined.
+Predecessor of 39 is 27
+Predecessor of 47 is 39
+Predecessor of 36 is 27
+Predecessor of 12 is 9
+Predecessor of 6 is 3
+
+****************** Test Linked List Correctness ****************** 
+
+Inserting 5 at front. Current list: [5]
+Inserting 32 at end. Current list: [5 -> 32]
+Inserting 16 at front. Current list: [16 -> 5 -> 32]

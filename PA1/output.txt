@@ -1,0 +1,78 @@
+**** Enqueue Test ****
+
+Enqueue 5
+Stack implementation: [5]
+Standard implementation: [5]
+
+Enqueue 10
+Stack implementation: [5, 10]
+Standard implementation: [5, 10]
+
+Enqueue 15
+Stack implementation: [5, 10, 15]
+Standard implementation: [5, 10, 15]
+
+Enqueue 20
+Stack implementation: [5, 10, 15, 20]
+Standard implementation: [5, 10, 15, 20]
+
+**** Dequeue Test ****
+
+Stack implementation: (Dequeued 5) [10, 15, 20]
+Standard implementation: (Dequeued 5) [10, 15, 20]
+
+Stack implementation: (Dequeued 10) [15, 20]
+Standard implementation: (Dequeued 10) [15, 20]
+
+**** Enqueue Test ****
+
+Enqueue 7
+Stack implementation: [15, 20, 7]
+Standard implementation: [15, 20, 7]
+
+Enqueue 14
+Stack implementation: [15, 20, 7, 14]
+Standard implementation: [15, 20, 7, 14]
+
+Enqueue 21
+Stack implementation: [15, 20, 7, 14, 21]
+Standard implementation: [15, 20, 7, 14, 21]
+
+Enqueue 28
+Stack implementation: [15, 20, 7, 14, 21, 28]
+Standard implementation: [15, 20, 7, 14, 21, 28]
+
+Enqueue 35
+Stack implementation: [15, 20, 7, 14, 21, 28, 35]
+Standard implementation: [15, 20, 7, 14, 21, 28, 35]
+
+**** Dequeue Test ****
+
+Stack implementation: (Dequeued 15) [20, 7, 14, 21, 28, 35]
+Standard implementation: (Dequeued 15) [20, 7, 14, 21, 28, 35]
+
+Stack implementation: (Dequeued 20) [7, 14, 21, 28, 35]
+Standard implementation: (Dequeued 20) [7, 14, 21, 28, 35]
+
+Stack implementation: (Dequeued 7) [14, 21, 28, 35]
+Standard implementation: (Dequeued 7) [14, 21, 28, 35]
+
+Stack implementation: (Dequeued 14) [21, 28, 35]
+Standard implementation: (Dequeued 14) [21, 28, 35]
+
+Stack implementation: (Dequeued 21) [28, 35]
+Standard implementation: (Dequeued 21) [28, 35]
+
+Stack implementation: (Dequeued 28) [35]
+Standard implementation: (Dequeued 28) [35]
+
+Stack implementation: (Dequeued 35) []
+Standard implementation: (Dequeued 35) []
+
+**** Sorting ****
+
+Original Array: [13, 17, 8, 14, 1]
+Selection Sorted Array: [1, 8, 13, 14, 17]
+
+Original Array: [-13, -17, -8, -14, -1, -20]
+Insertion Sorted Array: [-20, -17, -14, -13, -8, -1]
