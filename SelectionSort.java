@@ -18,10 +18,10 @@ public class SelectionSort {
 				if(arr[next] < arr[posMin]) {
 					posMin = next;
 				}
-				int temp = arr[posMin];
-				arr[posMin] = arr[i];
-				arr[i] = temp;
 			}
+			int temp = arr[posMin];
+			arr[posMin] = arr[i];
+			arr[i] = temp;
 		}
 	}
 }
