@@ -48,10 +48,13 @@ public class BinarySearchApplications {
 		int predIndex = -1;
 		while(left <= right) {
 			int mid = (left + right) / 2;
+			System.out.println("Current mid:" + mid);
 			if(array[mid] < key){
 				predIndex = mid;
 				left = mid + 1;
+				System.out.println("Current left: " + left);
 			}else{ 
+				System.out.println("Current right: " + right);
 				right = mid - 1;
 			}
 		}

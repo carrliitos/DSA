@@ -2,8 +2,9 @@ import java.util.Arrays;
 
 public class RecursiveMethods {
 	public static void main(String[] args) {
-		int target = 1;
+		int target = 16;
 		int[] x = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21};
+		int B[] = {3, 7, 9, 14, 15, 17, 24, 81};
 		System.out.println("Target: " + target);
 		System.out.println("");
 		System.out.println("Linear Search:");
@@ -11,6 +12,8 @@ public class RecursiveMethods {
 		System.out.println("");
 		System.out.println("Binary Search:");
 		binarySearch(x, target);
+		int y = predecessor(B, B.length, target);
+		System.out.println("The predecessor of: " + target + " is on index: " + y + ", which is: " + B[y]);
 	}
 
 	/* Recursive Linear Array Search
@@ -92,5 +95,24 @@ public class RecursiveMethods {
 			}
 		}
 		return -1;
+	}
+
+	public static int predecessor(int array[], int arrayLength, int key) {
+		int left = 0;
+		int right = arrayLength - 1;
+		int predIndex = -1;
+		while(left <= right) {
+			int mid = (left + right) / 2;
+			System.out.println("Current mid:" + mid);
+			if(array[mid] < key){
+				predIndex = mid;
+				left = mid + 1;
+				System.out.println("Current left: " + left);
+			}else{ 
+				System.out.println("Current right: " + right);
+				right = mid - 1;
+			}
+		}
+		return predIndex;
 	}
 }
