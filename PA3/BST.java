@@ -1,56 +1,15 @@
-public class BinaryTree {
-	class TreeNode { // inner class
-		int value;
-		int height;
-		int subtreeSize;
-		TreeNode parent;
-		TreeNode left;
-		TreeNode right;
+public class BST {
 
-		public TreeNode(int value) {
-			height = subtreeSize = 1;
-			value = value;
-			parent = null;
-			left = null;
-			right = null;
-		}
-
-		public boolean isLeaf() {
-			return (left == null && right == null);
-		}
-		public boolean hasRightChild() {
-			return (right != null);
-		}
-		public boolean hasLeftChild() {
-			return (left != null);
-		}
-		public boolean isLeftChildOfParent() {
-			if(isRoot())
-				return false;
-			else
-				return parent.left == this;
-		}
-		public boolean isRoot() {
-			return (parent == null);
-		}
-		public String toString() {
-			if(isRoot())
-				return "<" + value + ", null>";
-			else
-				return "<" + value + " , " + parent.value + ">";
-		}
-	}
-
-	protected TreeNode root;
+	protected BSTNode root;
 	protected int size;
 
-	public BinaryTree() {
+	public BST() {
 		root = null;
 		size = 0;
 	}
 
-	public TreeNode search(int key) {
-		TreeNode tmp = root;
+	public BSTNode search(int key) {
+		BSTNode tmp = root;
 		while(tmp != null) {
 			if(tmp.value == key) {
 				return tmp;
@@ -60,16 +19,16 @@ public class BinaryTree {
 				tmp = tmp.left;
 			}
 		}
-		return null;
+		return null;		
 	}
 
-	private TreeNode insert(int val) {
+	private BSTNode insert(int val) {
 		if(getSize() == 0) {
-			return new TreeNode(val);
+			return new BSTNode(val);
 		}
 		
-		TreeNode tmp = root;
-		TreeNode parent = null;
+		BSTNode tmp = root;
+		BSTNode parent = null;
 		while(tmp != null) {
 			if(tmp.value == val) {
 				return null;
@@ -82,7 +41,7 @@ public class BinaryTree {
 			}
 		}
 
-		TreeNode newNode = new TreeNode(val);
+		BSTNode newNode = new BSTNode(val);
 		parent = newNode.parent;
 		if(parent.value > val) {
 			newNode.isLeftChildOfParent();
@@ -92,12 +51,12 @@ public class BinaryTree {
 	}
 
 	public boolean remove(int val) {
-		TreeNode delNode = search(val);
+		BSTNode delNode = search(val);
 		if (delNode == null) {
 			return false;
 		} else if (delNode.hasLeftChild() && delNode.hasRightChild()) {
 			// CASE 3: delNode has both left and right child
-			TreeNode maxNodeInLeftSubTree = findMax(delNode.left);
+			BSTNode maxNodeInLeftSubTree = findMax(delNode.left);
 			delNode.value = maxNodeInLeftSubTree.value;
 			// reduced to case 1 or 2
 			return deleteAtMostOneChild(maxNodeInLeftSubTree);
@@ -107,7 +66,7 @@ public class BinaryTree {
 	}
     
     public boolean insertAndSet(int val) {
-        TreeNode newNode = insert(val);
+        BSTNode newNode = insert(val);
         if (null == newNode)
             return false;
         while (newNode.parent != null) {
@@ -121,15 +80,15 @@ public class BinaryTree {
 		return getHeight(root);
 	}
 
-	public TreeNode findMin() {
+	public BSTNode findMin() {
 		return findMin(root);
 	}
 
-	public TreeNode findMax() {
+	public BSTNode findMax() {
 		return findMax(root);
 	}
 
-	public static TreeNode findMin(TreeNode node) {
+	public static BSTNode findMin(BSTNode node) {
 		if (null == node)
 			return null;
 		while (node.hasLeftChild()) {
@@ -138,7 +97,7 @@ public class BinaryTree {
 		return node;
 	}
 
-	public static TreeNode findMax(TreeNode node) {
+	public static BSTNode findMax(BSTNode node) {
 		if (null == node)
 			return null;
 		while (node.hasRightChild()) {
@@ -147,7 +106,7 @@ public class BinaryTree {
 		return node;
 	}
 
-	public static int getHeight(TreeNode node) {
+	public static int getHeight(BSTNode node) {
 		if (node == null)
 			return 0;
 		else
@@ -158,20 +117,20 @@ public class BinaryTree {
 		return size;
 	}
 
-	public static int getSubtreeSize(TreeNode node) {
+	public static int getSubtreeSize(BSTNode node) {
 		if (node == null)
 			return 0;
 		else
 			return node.subtreeSize;
 	}
 
-	public static void setHeightAndSubtreeSize(TreeNode node) {
+	public static void setHeightAndSubtreeSize(BSTNode node) {
 		node.height = 1 + Math.max(getHeight(node.left), getHeight(node.right));
 		node.subtreeSize = 1 + getSubtreeSize(node.left) + getSubtreeSize(node.right);
 	}
 
-	private boolean deleteAtMostOneChild(TreeNode delNode) { // delNode must have at most 1 child
-		TreeNode parentOfDelNode = delNode.parent;
+	private boolean deleteAtMostOneChild(BSTNode delNode) { // delNode must have at most 1 child
+		BSTNode parentOfDelNode = delNode.parent;
 		if (delNode.isRoot()) {
 			if (delNode.hasLeftChild()) {
 				delNode.left.parent = null;
@@ -190,7 +149,7 @@ public class BinaryTree {
 				parentOfDelNode.right = null;
 		} else {
 			// CASE 2: delNode only has a left or a right child
-			TreeNode correctChild;
+			BSTNode correctChild;
 			if (delNode.hasLeftChild())
 				correctChild = delNode.left;
 			else
@@ -210,7 +169,7 @@ public class BinaryTree {
 		return true;
 	}
 
-	private void print(TreeNode node) {
+	private void print(BSTNode node) {
 		if (null != node) {
 			System.out.print(node.toString() + " ");
 			print(node.left);
