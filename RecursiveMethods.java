@@ -2,9 +2,8 @@ import java.util.Arrays;
 
 public class RecursiveMethods {
 	public static void main(String[] args) {
-		int target = 16;
+		int target = 1;
 		int[] x = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21};
-		int B[] = {3, 7, 9, 14, 15, 17, 24, 81};
 		System.out.println("Target: " + target);
 		System.out.println("");
 		System.out.println("Linear Search:");
@@ -12,8 +11,6 @@ public class RecursiveMethods {
 		System.out.println("");
 		System.out.println("Binary Search:");
 		binarySearch(x, target);
-		int y = predecessor(B, B.length, target);
-		System.out.println("The predecessor of: " + target + " is on index: " + y + ", which is: " + B[y]);
 	}
 
 	/* Recursive Linear Array Search
@@ -53,70 +50,61 @@ public class RecursiveMethods {
 	* @param first -- subscript of first element
 	* @param last -- subscript of last element
 	* @return -- subscript of target if found; otherwise, return -1;
-	* Complexity of O(log n) comparisons
 	*/
-	private static int binarySearch(int[] items, int target, int first, int last) {
-		// Base case 1 -- unsuccessful search
-		if(first > last){
-			System.out.println("Target not in the array.");
-			return -1;
-		}else {
-			int middle = (first + last) / 2; // next probe index
-			if(items[middle] == target) {
-				System.out.println("Found it on index: " + middle);
-				return middle; // Successful base case
-			}else if(target < items[middle]) { // left half
-				System.out.println("Going on the left half.");
-				return binarySearch(items, target, first, middle - 1); // Recursive step				
-			}else{  // right half
-				System.out.println("Going on the right half.");
-				return binarySearch(items, target, middle + 1, last); // recursive step
-			}
-		}
-	}
-
-	/*binarySearch wrapper*/
-	public static int binarySearch(int[] items, int target) {
-		return binarySearch(items, target, 0, items.length -1);
-	}
-
-	// public static int binarySearch(int array[], int key) {
-	// 	int arrayLength = array.length;
-	// 	int left = 0;
-	// 	int right = arrayLength - 1;
-	// 	while(left <= right) {
-	// 		int mid = (left + right) / 2;
-	// 		if(array[mid] == key){
-	// 			System.out.println("Found it on index: " + mid);
-	// 			return mid;
-	// 		}else if(array[mid] > key){ 
-	// 			right = mid - 1; // left side of the array
-	// 		}else{
-	// 			left = mid + 1; // right side of the array
+	// private static int binarySearch(int[] items, int target, int first, int last) {
+	// 	// Base case 1 -- unsuccessful search
+	// 	if(first > last){
+	// 		System.out.println("Target not in the array.");
+	// 		return -1;
+	// 	}else {
+	// 		int middle = (first + last) / 2; // next probe index
+	// 		if(items[middle] == target) {
+	// 			System.out.println("Found it on index: " + middle);
+	// 			return middle; // Successful base case
+	// 		}else if(target < items[middle]) { // left half
+	// 			System.out.println("Going on the left half.");
+	// 			return binarySearch(items, target, first, middle - 1); // Recursive step				
+	// 		}else{  // right half
+	// 			System.out.println("Going on the right half.");
+	// 			return binarySearch(items, target, middle + 1, last); // recursive step
 	// 		}
 	// 	}
-	// 	return -1;
 	// }
 
-	/* Predecessor Problem application
-	* Given a set, the predecessor of a number x is the highest number in the set that is less than or equal to x
-	*/
-	public static int predecessor(int array[], int arrayLength, int key) {
+	// /*binarySearch wrapper*/
+	// public static int binarySearch(int[] items, int target) {
+	// 	return binarySearch(items, target, 0, items.length -1);
+	// }
+
+	private static int binarySearch(int array[], int key) {
+		int arrayLength = array.length;
 		int left = 0;
 		int right = arrayLength - 1;
-		int predIndex = -1;
 		while(left <= right) {
 			int mid = (left + right) / 2;
-			System.out.println("Current mid:" + mid);
-			if(array[mid] < key){
-				predIndex = mid;
-				left = mid + 1;
-				System.out.println("Current left: " + left);
-			}else{ 
-				System.out.println("Current right: " + right);
-				right = mid - 1;
+			if(array[mid] == key){
+				System.out.println("Found it on index: " + mid);
+				return mid;
+			}else if(array[mid] > key){ 
+				right = mid - 1; // left side of the array
+			}else{
+				left = mid + 1; // right side of the array
 			}
 		}
-		return predIndex;
+		return -1;
+	}
+
+
+	/** Recursive example - Fibonacci
+	* Base-case: fibonacci(1) = 1 andfibonacci(2) = 2
+	* Recursuve Rule: fibonacci(n) =fibonacci(n − 1) +fibonacci(n − 2)
+	*/
+	private static int fibonacci(int n) {
+		if(n <= 2) {
+			return 1;
+		}else {
+			return fibonacci(n - 1) + fibonacci(n - 2);
+		}
 	}
 }
+
