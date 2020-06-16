@@ -2,15 +2,25 @@ import java.util.Arrays;
 
 public class RecursiveMethods {
 	public static void main(String[] args) {
-		int target = 1;
-		int[] x = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21};
-		System.out.println("Target: " + target);
-		System.out.println("");
-		System.out.println("Linear Search:");
-		linearSearch(x, target);
-		System.out.println("");
-		System.out.println("Binary Search:");
-		binarySearch(x, target);
+		// int target = 1;
+		// int[] x = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21};
+		// System.out.println("Target: " + target);
+		// System.out.println("");
+		// System.out.println("Linear Search:");
+		// linearSearch(x, target);
+		// System.out.println("");
+		// System.out.println("Binary Search:");
+		// binarySearch(x, target);
+
+		System.out.println("*** Test Recursion ***\n");
+		int A[] = { 123076, 689201, 6592073, 12461, 1355171 };
+		for (int a = 0; a < A.length; a++)
+			System.out.printf("Sum of even digits in %d is %d\n", A[a], sumEvenDigits(A[a]));
+		int B[] = { 1, 2, 3, 4, 5, 6 };
+		for (int b = 0; b < B.length; b++) {
+			System.out.printf("\nAll binary strings of length %d that have more ones than zeroes\n", B[b]);
+			binaryStringsWithMoreOnes(B[b]);
+		}
 	}
 
 	/* Recursive Linear Array Search
@@ -96,8 +106,8 @@ public class RecursiveMethods {
 
 
 	/** Recursive example - Fibonacci
-	* Base-case: fibonacci(1) = 1 andfibonacci(2) = 2
-	* Recursuve Rule: fibonacci(n) =fibonacci(n − 1) +fibonacci(n − 2)
+	* 	Base-case: fibonacci(1) = 1 andfibonacci(2) = 2
+	* 	Recursuve Rule: fibonacci(n) =fibonacci(n − 1) +fibonacci(n − 2)
 	*/
 	private static int fibonacci(int n) {
 		if(n <= 2) {
@@ -106,5 +116,47 @@ public class RecursiveMethods {
 			return fibonacci(n - 1) + fibonacci(n - 2);
 		}
 	}
-}
 
+	/** sumEvenDigits - Return the sum of digits in n that are even.
+	* 	Extract the last digit and check if it is even or not.
+	* 		If even, this digit contributes to the overall sum, else it does not.
+	*/
+	private static int sumEvenDigits(int n) {
+		if (n == 0) return 0;
+		int lastDigit = n % 10;
+		int firstDigits = n / 10;
+		if (lastDigit % 2 == 0) {
+			return lastDigit + sumEvenDigits(firstDigits);
+		} else {
+			return 0 + sumEvenDigits(firstDigits);
+		}
+	}
+
+	/** sumDigits - Consider a number 5671.  Sum of its digits is 5 + 6 + 7 + 1 = 19.
+	* 	LetsumDigits(num) be the sumof the digits of the number.
+	*/
+	private static int sumDigits(int n) {
+		if(n < 10) {
+			return n;
+		}else {
+			return sumDigits(n / 10) + n % 10;
+		}
+	}
+
+	private static void binaryStringsWithMoreOnes(String str, int numZeroes, int numOnes, int n) {
+		if(numOnes < numZeroes) {
+			return;
+		}
+		if(n == 0) {
+			System.out.println(str);
+			return;
+		}
+		binaryStringsWithMoreOnes(str + "1", numZeroes, numOnes + 1, n - 1);
+		binaryStringsWithMoreOnes(str + "0", numZeroes + 1, numOnes, n - 1);
+	}
+
+	/*WRAPPER FOR ABOVE METHOD*/
+	public static void binaryStringsWithMoreOnes(int n) {
+		binaryStringsWithMoreOnes("", 0, 0, n);
+	}	
+}
