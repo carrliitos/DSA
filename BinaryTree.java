@@ -51,6 +51,7 @@ public class BinaryTree {
 
 	public TreeNode search(int key) {
 		TreeNode tmp = root;
+		// Traverse through the tree
 		while(tmp != null) {
 			if(tmp.value == key) {
 				return tmp;
@@ -64,12 +65,15 @@ public class BinaryTree {
 	}
 
 	private TreeNode insert(int val) {
+		// check to see if the tree exists
+		// 	if not, create a new one with the val as the node
 		if(getSize() == 0) {
 			return new TreeNode(val);
 		}
 		
 		TreeNode tmp = root;
 		TreeNode parent = null;
+		// traverse through and search the tree
 		while(tmp != null) {
 			if(tmp.value == val) {
 				return null;
@@ -82,6 +86,8 @@ public class BinaryTree {
 			}
 		}
 
+		// once we find where val should be placed,
+		// 		create a new tree node with that val
 		TreeNode newNode = new TreeNode(val);
 		parent = newNode.parent;
 		if(parent.value > val) {
@@ -91,7 +97,7 @@ public class BinaryTree {
 		return newNode;
 	}
 
-	public boolean remove(int val) {
+	public boolean remove(int val) { // This still needs some clarification
 		TreeNode delNode = search(val);
 		if (delNode == null) {
 			return false;
@@ -129,7 +135,7 @@ public class BinaryTree {
 		return findMax(root);
 	}
 
-	public static TreeNode findMin(TreeNode node) {
+	public static TreeNode findMin(TreeNode node) { // By definition, the leftmost node is the minimum
 		if (null == node)
 			return null;
 		while (node.hasLeftChild()) {
@@ -138,7 +144,7 @@ public class BinaryTree {
 		return node;
 	}
 
-	public static TreeNode findMax(TreeNode node) {
+	public static TreeNode findMax(TreeNode node) { // By definition, the rightmost node is the maximum
 		if (null == node)
 			return null;
 		while (node.hasRightChild()) {
