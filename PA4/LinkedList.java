@@ -9,13 +9,52 @@ public class LinkedList {
 		size = 0;
 	}
 
-	// public void mergesort() {
-	// 	mergedArray = new int[size()];
-	// 	mergesort(0, size() - 1, head, tail);
-	// }
+	public void mergesort() {
+		mergedArray = new int[size()];
+		mergesort(0, size() - 1, head, tail);
+	}
 
-	// private void mergesort(int left, int right, ListNode leftNode, ListNode rightNode) {
-	// }
+	private void mergesort(int left, int right, ListNode leftNode, ListNode rightNode) {
+		if(left >= right) {
+			return;
+		}else {
+			int mid = (left + right) / 2;
+			ListNode midNode = leftNode;
+			for(int i = left; i < mid; i++) {
+				ListNode newNode = new ListNode(mid);
+				newNode.next = midNode;
+				midNode = newNode;
+				
+				mergesort(left, mid, leftNode, midNode);
+				mergesort((mid + 1), right, midNode.next, rightNode);
+				int k = left; 
+				ListNode tmp1 = leftNode, tmp2 = midNode.next;
+				while(tmp1 != midNode.next && tmp2 != rightNode.next) {
+					if(tmp1.value < tmp2.value) {
+						mergedArray[k++] = tmp1.value;
+						tmp1 = tmp1.next;
+					}else {
+						mergedArray[k++] = tmp2.value;
+						tmp2 = tmp2.next;
+					}
+				}
+				while(tmp1 != midNode.next) {
+					mergedArray[k++] = tmp1.value;
+					tmp1 = tmp1.next;
+				}
+				while(tmp2 != rightNode.next) {
+					mergedArray[k++] = tmp2.value;
+					tmp2 = tmp2.next;
+				}
+			}
+			int k = left;
+			ListNode tmp = leftNode;
+			while(tmp != rightNode.next) {
+				tmp.value = mergedArray[k++];
+				tmp = tmp.next;
+			}
+		}
+	}
 
 	public ListNode insertAtFront(int value) {
 		ListNode newNode = new ListNode(value);

@@ -1,0 +1,43 @@
+*** Test Recursion ***
+
+Sum of even digits in 123076 is 8
+Sum of even digits in 689201 is 16
+Sum of even digits in 6592073 is 8
+Sum of even digits in 12461 is 12
+Sum of even digits in 1355171 is 0
+
+All binary strings of length 1 that have more ones than zeroes
+1
+
+All binary strings of length 2 that have more ones than zeroes
+11
+10
+
+All binary strings of length 3 that have more ones than zeroes
+111
+110
+101
+
+All binary strings of length 4 that have more ones than zeroes
+1111
+1110
+1101
+1100
+1011
+1010
+
+All binary strings of length 5 that have more ones than zeroes
+11111
+11110
+11101
+11100
+11011
+11010
+11001
+10111
+10110
+10101
+
+*** Test Rotated Array ***
+
+Array is: [8, 10, 14, 17, 19, 21, 1, 3, 5, 6]
