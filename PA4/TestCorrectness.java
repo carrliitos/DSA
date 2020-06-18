@@ -168,10 +168,10 @@ public class TestCorrectness {
 
 	public static void main(String[] args) throws Exception {
 		testRecursion();
-		testRotatedArray();
 		testMergesort();
 		testCommonElements();
 		testKSortedMerge();
 		testMergesortLinkedList();
+		testRotatedArray();
 	}
 }

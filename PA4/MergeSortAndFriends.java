@@ -42,7 +42,7 @@ public class MergeSortAndFriends {
 			}else if(A[a] > B[b]) {
 				b++;
 			}else {
-				if(!dynamicArray.contains(A[a])){
+				while(a < lenA && A[a] == B[b]){
 					dynamicArray.add(A[a]);
 					a++;
 				}
