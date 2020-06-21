@@ -53,44 +53,6 @@ public class LinkedList {
 			tmp.value = mergedArray[k++];
 			tmp = tmp.next;
 		}
-
-		// if(left >= right) {
-		// 	return;
-		// }else {
-		// 	int mid = (left + right) / 2;
-		// 	ListNode midNode = leftNode;
-		// 	for(int i = left; i < mid; i++) {
-		// 		midNode.next = midNode;
-				
-		// 		mergesort(left, mid, leftNode, midNode);
-		// 		mergesort((mid + 1), right, midNode.next, rightNode);
-		// 		int k = left; 
-		// 		ListNode tmp1 = leftNode, tmp2 = midNode.next;
-		// 		while(tmp1 != midNode.next && tmp2 != rightNode.next) {
-		// 			if(tmp1.value < tmp2.value) {
-		// 				mergedArray[k++] = tmp1.value;
-		// 				tmp1 = tmp1.next;
-		// 			}else {
-		// 				mergedArray[k++] = tmp2.value;
-		// 				tmp2 = tmp2.next;
-		// 			}
-		// 		}
-		// 		while(tmp1 != midNode.next) {
-		// 			mergedArray[k++] = tmp1.value;
-		// 			tmp1 = tmp1.next;
-		// 		}
-		// 		while(tmp2 != rightNode.next) {
-		// 			mergedArray[k++] = tmp2.value;
-		// 			tmp2 = tmp2.next;
-		// 		}
-		// 	}
-		// 	int k = left;
-		// 	ListNode tmp = leftNode;
-		// 	while(tmp != rightNode.next) {
-		// 		tmp.value = mergedArray[k++];
-		// 		tmp = tmp.next;
-		// 	}
-		// }
 	}
 
 	public ListNode insertAtFront(int value) {
