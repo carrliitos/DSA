@@ -18,9 +18,9 @@ public class RotatedBinarySearch {
 			return left;
 		}
 		int mid = (left + right) / 2;
-		if(mid > (mid + 1)) {
+		if(array[mid] > array[(mid + 1)]) {
 			return mid;
-		}else if(mid < lastValue) {
+		}else if(array[mid] < array[lastValue]) {
 			return maxIndex(array, lastValue, left, (mid - 1));
 		}else {
 			return maxIndex(array, lastValue, (mid + 1), right);

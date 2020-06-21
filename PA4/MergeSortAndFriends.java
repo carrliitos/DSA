@@ -61,13 +61,13 @@ public class MergeSortAndFriends {
 			int newK = (k + 1)/2;
 			int mergedLists[][] = new int[newK][]; // This will store the pairwise merged lists
 			int mergedListLengths[] = new int[newK]; // This will store the lengths of the pairwise merged lists
-			for(int i = 0; i < k/2 - 1; i++) {
+			for(int i = 0; i <= k/2 - 1; i++) {
 				mergedListLengths[i] = listLengths[2 * i] + listLengths[(2 * i) + 1];
 				mergedLists[i] = binaryMerge(lists[2 * i], lists[(2 * i) + 1], listLengths[2 * i], listLengths[(2 * i) + 1]);
 			}
 			if(k % 2 != 0) {
-				lists[k - 1] = mergedLists[newK - 1];
-				listLengths[k - 1] = mergedListLengths[newK - 1];
+				mergedLists[newK - 1] = lists[k - 1];
+				mergedListLengths[newK - 1] = listLengths[k - 1];
 			}
 			/** Note to self:
 			* 	If k is odd, then the last row in lists does not have a pair to

@@ -64,9 +64,9 @@ Original sorted arrays
 [-10, 5, 18, 67, 100]
 [-12, -9, -6, 0, 1]
 [-65, -32, 10]
-[1, 19, 45, 67]
+null
 
-Final merged array:[-65, -32, -12, -10, -9, -6, 0, 1, 1, 1, 5, 5, 9, 10, 18, 18, 19, 45, 67, 67, 100]
+Final merged array:[]
 
 Original sorted arrays
 [1, 5, 9, 18]
@@ -74,7 +74,7 @@ Original sorted arrays
 [-12, -9, -6, 0, 1]
 [-65, -32, 10]
 
-Final merged array:[-65, -32, -12, -10, -9, -6, 0, 1, 1, 5, 5, 9, 10, 18, 18, 67, 100]
+Final merged array:[-10, 1, 5, 5, 9, 18, 18, 67, 100]
 
 Original sorted arrays
 [1, 5, 9, 18]
@@ -90,8 +90,3 @@ Final merged array:[1, 5, 9, 18]
 *** Mergesort Linked List ***
 
 Original List: [-12 -> 66 -> 66 -> 8 -> 16 -> 5 -> 16 -> 5 -> 32 -> 32 -> 21 -> 50 -> 32]
-Sorted List:   [-12 -> 5 -> 5 -> 8 -> 16 -> 16 -> 21 -> 32 -> 32 -> 32 -> 50 -> 66 -> 66]
-
-*** Test Rotated Array ***
-
-Array is: [8, 10, 14, 17, 19, 21, 1, 3, 5, 6]
