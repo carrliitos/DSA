@@ -42,13 +42,19 @@ public class MergeSortAndFriends {
 			}else if(A[a] > B[b]) {
 				b++;
 			}else {
-				while(a < lenA && A[a] == B[b]){
-					dynamicArray.add(A[a]);
-					if(A[a] == A[a + 1]){
-						dynamicArray.remove(A[a]);
-					}
-					a++;
+				for(int i = 0; i < lenA - 1; i++){
+					if(A[i] == A[i + 1])
+						continue;
 				}
+				dynamicArray.add(A[a]);
+				a++;
+				// while(a < lenA && A[a] == B[b]){
+				// 	dynamicArray.add(A[a]);
+				// 	if(A[a] == A[a + 1]){
+				// 		dynamicArray.remove(A[a]);
+				// 	}
+				// 	a++;
+				// }
 			}
 		}
 		return dynamicArray;
