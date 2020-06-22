@@ -12,7 +12,7 @@ public class Hashing {
 
 	protected int getHashValue(int val) {
 		int hashValue = (37 * val + 61) % TABLE_SIZE; // modded to decrease the size of the unique values created
-		System.out.println("Hash value: " + hashValue);
+		System.out.println("Hash value: " + hashValue);	
 		return hashValue;
 	}
 

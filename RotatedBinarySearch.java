@@ -2,7 +2,8 @@ import java.util.Arrays;
 
 public class RotatedBinarySearch {
 	public static void main(String[] args) throws Exception {
-		testRotatedArray();
+		int[] A = {8,12,14,17,19,21,1,3,5};
+		maxIndex(A, A[A.length - 1], 0, A.length);
 	}
 
 	public static int search(int array[], int length, int key) {
@@ -54,12 +55,15 @@ public class RotatedBinarySearch {
 			return left;
 		}
 		int mid = (left + right) / 2;
-		if(array[mid] > array[mid + 1]) {
+		if(array[mid] > array[(mid + 1)]) {
+			System.out.println("Mid: " + mid);
 			return mid;
 		}else if(array[mid] < array[array.length - 1]) {
-			return maxIndex(array, lastValue, left, mid - 1);
+			System.out.printf("Array: %s%nLeft: %s%nRight: %s%nMid: %s%n%n", Arrays.toString(array), left, right, mid);
+			return maxIndex(array, lastValue, left, (mid - 1));
 		}else {
-			return maxIndex(array, lastValue, mid + 1, right);
+			System.out.printf("Array: %s%nLeft: %s%nRight: %s%nMid: %s%n%n", Arrays.toString(array), left, right, mid);
+			return maxIndex(array, lastValue, (mid + 1), right);
 		}
 	}
 
