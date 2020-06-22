@@ -11,7 +11,9 @@ public class Hashing {
 	}
 
 	protected int getHashValue(int val) {
-		return (37 * val + 61) % TABLE_SIZE; // modded to decrease the size of the unique values created
+		int hashValue = (37 * val + 61) % TABLE_SIZE; // modded to decrease the size of the unique values created
+		System.out.println("Hash value: " + hashValue);
+		return hashValue;
 	}
 
 	public boolean search(int key) {

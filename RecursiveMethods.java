@@ -2,25 +2,30 @@ import java.util.Arrays;
 
 public class RecursiveMethods {
 	public static void main(String[] args) {
-		// int target = 1;
-		// int[] x = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21};
+		int xTarget = 14;
+		int[] x = {3,7,9,14,15,17,24,81};
+		int yTarget = 14;
+		int[] y = {81,24,17,15,14,9,7,3};
 		// System.out.println("Target: " + target);
 		// System.out.println("");
 		// System.out.println("Linear Search:");
 		// linearSearch(x, target);
-		// System.out.println("");
-		// System.out.println("Binary Search:");
-		// binarySearch(x, target);
+		System.out.println("");
+		System.out.println("Binary Search in Ascending Order:");
+		binarySearchAsc(x, xTarget);
+		System.out.println("");
+		System.out.println("Binary Search in Descending Order:");
+		binarySearchDesc(y, yTarget);
 
-		System.out.println("*** Test Recursion ***\n");
-		int A[] = { 123076, 689201, 6592073, 12461, 1355171 };
-		for (int a = 0; a < A.length; a++)
-			System.out.printf("Sum of even digits in %d is %d\n", A[a], sumEvenDigits(A[a]));
-		int B[] = { 1, 2, 3, 4, 5, 6 };
-		for (int b = 0; b < B.length; b++) {
-			System.out.printf("\nAll binary strings of length %d that have more ones than zeroes\n", B[b]);
-			binaryStringsWithMoreOnes(B[b]);
-		}
+		// System.out.println("*** Test Recursion ***\n");
+		// int A[] = { 123076, 689201, 6592073, 12461, 1355171 };
+		// for (int a = 0; a < A.length; a++)
+		// 	System.out.printf("Sum of even digits in %d is %d\n", A[a], sumEvenDigits(A[a]));
+		// int B[] = { 1, 2, 3, 4, 5, 6 };
+		// for (int b = 0; b < B.length; b++) {
+		// 	System.out.printf("\nAll binary strings of length %d that have more ones than zeroes\n", B[b]);
+		// 	binaryStringsWithMoreOnes(B[b]);
+		//}
 	}
 
 	/* Recursive Linear Array Search
@@ -86,7 +91,7 @@ public class RecursiveMethods {
 	// 	return binarySearch(items, target, 0, items.length -1);
 	// }
 
-	private static int binarySearch(int array[], int key) {
+	private static int binarySearchAsc(int array[], int key) {
 		int arrayLength = array.length;
 		int left = 0;
 		int right = arrayLength - 1;
@@ -95,15 +100,36 @@ public class RecursiveMethods {
 			if(array[mid] == key){
 				System.out.println("Found it on index: " + mid);
 				return mid;
-			}else if(array[mid] > key){ 
-				right = mid - 1; // left side of the array
-			}else{
+			}else if(key > array[mid]){ 
 				left = mid + 1; // right side of the array
+				System.out.printf("Mid: %s%nLeft %s%nRight: %s%n\n", mid, left, right);
+			}else{
+				right = mid - 1; // left side of the array
+				System.out.printf("Mid: %s%nLeft %s%nRight: %s%n\n", mid, left, right);
 			}
 		}
 		return -1;
 	}
 
+	private static int binarySearchDesc(int array[], int key) {
+		int arrayLength = array.length;
+		int left = 0;
+		int right = arrayLength - 1;
+		while(left <= right) {
+			int mid = (left + right) / 2;
+			if(array[mid] == key){
+				System.out.println("Found it on index: " + mid);
+				return mid;
+			}else if(key < array[mid]){ 
+				left = mid + 1; // right side of the array
+				System.out.printf("Mid: %s%nLeft %s%nRight: %s%n\n", mid, left, right);
+			}else{
+				right = mid - 1; // left side of the array
+				System.out.printf("Mid: %s%nLeft %s%nRight: %s%n\n", mid, left, right);
+			}
+		}
+		return -1;
+	}
 
 	/** Recursive example - Fibonacci
 	* 	Base-case: fibonacci(1) = 1 andfibonacci(2) = 2

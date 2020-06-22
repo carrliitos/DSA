@@ -48,13 +48,6 @@ public class MergeSortAndFriends {
 				}
 				dynamicArray.add(A[a]);
 				a++;
-				// while(a < lenA && A[a] == B[b]){
-				// 	dynamicArray.add(A[a]);
-				// 	if(A[a] == A[a + 1]){
-				// 		dynamicArray.remove(A[a]);
-				// 	}
-				// 	a++;
-				// }
 			}
 		}
 		return dynamicArray;
