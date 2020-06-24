@@ -16,8 +16,8 @@ public class DFS extends Graph {
 			closed[i] = false;
 		} 
 		// use a loop to initialize each cell of level[] to infinity
-		for(int j = 0; j < Integer.MAX_VALUE; j++) {
-			int level[] = new int[j];
+		for(int j = 0; j < numVertices; j++) {
+			level[j] = Integer.MAX_VALUE;
 		}
 		// call DFS Helper method with s as an argument
 		helpDFS(s);

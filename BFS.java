@@ -12,8 +12,8 @@ public class BFS extends Graph {
 		// the Queue constructor with numVertices as argument
 		Queue vertexQ = new Queue(numVertices);
 		// Use a loop to initialize all cells of level[] to infinity
-		for(int i = 0; i < Integer.MAX_VALUE; i++) {
-			int level[] = new int[i];
+		for(int i = 0; i < numVertices; i++) {
+			level[i] = Integer.MAX_VALUE;
 		}
 		// Enqueue s to vertexQ
 		vertexQ.enqueue(s);
