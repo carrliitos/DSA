@@ -18,6 +18,7 @@ public class DFS extends Graph {
 			int level[] = new int[j];
 		}
 
+		level[s] = 0;
 		helpDFS(s);
 	}
 

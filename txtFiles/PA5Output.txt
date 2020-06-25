@@ -20,21 +20,21 @@ Level array (from v6):   [2, 3, 4, 3, 1, 2, 0]
 
 *** Test DFS on UnweightedGraph 1 ***
 
-Level array (from v0):   [infty, -2147483648, -infty, -2147483646, -2147483643, -2147483644, -2147483645]
-Level array (from v1):   [-2147483648, infty, -2147483646, -infty, -2147483644, -2147483645, -2147483646]
-Level array (from v2):   [-infty, -2147483648, infty, -2147483646, -2147483643, -2147483644, -2147483645]
-Level array (from v3):   [-2147483648, -infty, -2147483646, infty, -infty, -2147483646, -2147483645]
-Level array (from v4):   [-2147483648, -infty, -2147483646, -2147483645, infty, -2147483643, -2147483644]
-Level array (from v5):   [-infty, -2147483646, -2147483645, -2147483644, -2147483648, infty, -2147483643]
-Level array (from v6):   [-infty, -2147483646, -2147483645, -2147483648, -2147483646, -2147483645, infty]
+Level array (from v0):   [0, 1, 2, 3, 6, 5, 4]
+Level array (from v1):   [1, 0, 3, 2, 5, 4, 3]
+Level array (from v2):   [2, 1, 0, 3, 6, 5, 4]
+Level array (from v3):   [1, 2, 3, 0, 2, 3, 4]
+Level array (from v4):   [1, 2, 3, 4, 0, 6, 5]
+Level array (from v5):   [2, 3, 4, 5, 1, 0, 6]
+Level array (from v6):   [2, 3, 4, 1, 3, 4, 0]
 
 *** Test DFS on UnweightedGraph 2 ***
 
-Level array (from v0):   [infty, -2147483648, -infty, -2147483646, infty, -2147483645, infty]
-Level array (from v1):   [-2147483648, infty, -2147483646, -infty, infty, -2147483646, infty]
-Level array (from v2):   [-infty, -2147483648, infty, -2147483646, infty, -2147483645, infty]
-Level array (from v3):   [-2147483648, -infty, -2147483646, infty, infty, -2147483648, infty]
-Level array (from v4):   [-2147483648, -infty, -2147483646, -2147483645, infty, -2147483644, -2147483648]
-Level array (from v5):   [-infty, -2147483646, -2147483645, -2147483648, infty, infty, infty]
-Level array (from v6):   [-infty, -2147483646, -2147483645, -2147483644, -2147483648, -2147483643, infty]
+Level array (from v0):   [0, 1, 2, 3, infty, 4, infty]
+Level array (from v1):   [1, 0, 3, 2, infty, 3, infty]
+Level array (from v2):   [2, 1, 0, 3, infty, 4, infty]
+Level array (from v3):   [1, 2, 3, 0, infty, 1, infty]
+Level array (from v4):   [1, 2, 3, 4, 0, 5, 1]
+Level array (from v5):   [2, 3, 4, 1, infty, 0, infty]
+Level array (from v6):   [2, 3, 4, 5, 1, 6, 0]
 

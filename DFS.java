@@ -19,6 +19,8 @@ public class DFS extends Graph {
 		for(int j = 0; j < numVertices; j++) {
 			level[j] = Integer.MAX_VALUE;
 		}
+		// set level[s] = 0
+		level[s] = 0;
 		// call DFS Helper method with s as an argument
 		helpDFS(s);
 	}
