@@ -56,24 +56,24 @@ public class TestCorrectness {
 		}
 	}
 
-	// private static void testMutantLanguage() throws Exception {
-	// 	String filePaths[] = {MUTANT1_PATH, MUTANT2_PATH, MUTANT3_PATH};
-	// 	for (int i = 0; i < filePaths.length; i++) {
-	// 		System.out.printf("*** Test Mutant Language %d ***\n\n", i + 1);
-	// 		MutantLanguage mutant = new MutantLanguage(filePaths[i]);
-	// 		char topoOrder[] = mutant.getOrder();
-	// 		if (topoOrder != null)
-	// 			System.out.println("Alphabet order: " + Arrays.toString(topoOrder));
-	// 		else
-	// 			System.out.println("Unfortunately, this language has circular dependency.");
-	// 		System.out.println();
-	// 	}
-	// }
+	private static void testMutantLanguage() throws Exception {
+		String filePaths[] = {MUTANT1_PATH, MUTANT2_PATH, MUTANT3_PATH};
+		for (int i = 0; i < filePaths.length; i++) {
+			System.out.printf("*** Test Mutant Language %d ***\n\n", i + 1);
+			MutantLanguage mutant = new MutantLanguage(filePaths[i]);
+			char topoOrder[] = mutant.getOrder();
+			if (topoOrder != null)
+				System.out.println("Alphabet order: " + Arrays.toString(topoOrder));
+			else
+				System.out.println("Unfortunately, this language has circular dependency.");
+			System.out.println();
+		}
+	}
 
 	public static void main(String[] args) throws Exception {
 		testBFS();
 		testDFS();
 		testDAG();
-		// testMutantLanguage();
+		testMutantLanguage();
 	}
 }
