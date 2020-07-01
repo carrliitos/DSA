@@ -31,14 +31,34 @@ public class Heap {
 				// let rightKey be the value at rightIndex
 				String rightKey = heapArray.get(rightIndex);
 				// if(leftKey < currentKey and leftKey < rightKey), then left child is the smallest, so:
-				if((heapArray.get(leftKey).compareTo(heapArray.get(currentKey)) < 0) 
-					&& (heapArray.get(leftKey).compareTo(heapArray.get(rightKey)) < 0)) {
+				if((leftKey.compareTo(currentKey) < 0) 
+					&& (leftKey.compareTo(rightKey) < 0)) {
 					// swap values of leftIndex and currentIndex
 					swap(leftIndex, currentIndex);
 					// set currentIndex to leftIndex
 					currentIndex = leftIndex;
+				// else if (rightKey < currentKey), then the right child is the smallest
+				}else if(rightKey.compareTo(currentKey) < 0) {
+					// swap the values of rightIndex and currentIndex
+					swap(rightIndex, currentIndex);
+					// set the currentIndex = rightIndex
+					currentIndex = rightIndex;
+				// else current node is the smallest
+				}else {
+					break;
 				}
+			// else if (leftKey < currentKey) then right child does not exist, left child is thelast node, and left child is the smaller; so:
+			}else if(leftKey.compareTo(currentKey) < 0) {
+				swap(leftIndex, currentIndex);
+				break;
+			// else currentIndex is the smallest
+			}else { 
+				break;
 			}
+			// set leftIndex = 2 * currentIndex + 1;
+			leftIndex = 2 * currentIndex + 1;
+			// set rightIndex = leftIndex + 1;
+			rightIndex = leftIndex + 1;
 		}
 	}
 
