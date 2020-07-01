@@ -1,0 +1,9 @@
+*** Test Trie (Spell Checker) ***
+
+Dictionary: [abc$, abcd$, bce$, abx$, acfe$, bfr$, de$]
+Document:   [abc, def, abcd, bce, abx, acfe, bfr, xyz, de, tyu, ab]
+
+Incorrect spellings: abc def abcd bce abx acfe bfr xyz de tyu ab 
+
+*** Test Dijkstra (dijkstra1.txt) ***
+
