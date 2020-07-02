@@ -55,7 +55,7 @@ public class Heap {
 		while((currentIndex > 0) && (heapArray.get(parentIndex).compareTo(heapArray.get(currentIndex)) > 0)) {
 			swap(parentIndex, currentIndex);
 			currentIndex = parentIndex;
-			heapArray.set(parentIndex, heapArray.get((currentIndex - 1)/2));
+			parentIndex = (currentIndex - 1) / 2;
 		}
 	}
 

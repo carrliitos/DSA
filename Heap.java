@@ -76,8 +76,8 @@ public class Heap {
 			swap(parentIndex, currentIndex);
 			// set currentIndex = parentIndex
 			currentIndex = parentIndex;
-			// update parentIndex
-			heapArray.set(parentIndex, heapArray.get((currentIndex - 1)/2));
+			// update parentIndex = (currentIndex - 1) / 2
+			parentIndex = (currentIndex - 1) / 2;
 		}
 	}
 

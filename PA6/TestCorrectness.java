@@ -67,11 +67,11 @@ public class TestCorrectness {
 
 	public static void main(String[] args) throws Exception {
 
-		// testTrie();
-		// System.out.println();
-		// testDijkstra();
+		testTrie();
+		System.out.println();
+		testDijkstra();
 		testHeapSort();
-		// System.out.println();
-		// testTopKElements();
+		System.out.println();
+		testTopKElements();
 	}
 }

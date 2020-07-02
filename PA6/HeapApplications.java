@@ -9,9 +9,7 @@ public class HeapApplications {
 
 		for(int i = 0; i < arrayLen; i++) {
 			array[i] = heap.getMinimum();
-			System.out.println("Minimum is got: " + array[i]);
 			heap.deleteMinimum();
-			System.out.println("Minimum deleted.");
 		}
 	}
 
