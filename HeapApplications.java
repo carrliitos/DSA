@@ -7,9 +7,13 @@ public class HeapApplications {
 		for(int i = 0; i < arrayLen; i++) {
 			heap.insert(array[i]);
 		}
+		// for(String string : array) {
+		// 	heap.insert(string);
+		// }
+				
 		// for (i = 0 to i < arrayLen), do the following:
 		for(int i = 0; i < arrayLen; i++) {
-			// set array[i] to the smallest string in the heap (use getM inimum() function of the heap to get the minimum string)
+			// set array[i] to the smallest string in the heap (use getMinimum() function of the heap to get the minimum string)
 			array[i] = heap.getMinimum();
 			// delete the minimum from the heap
 			heap.deleteMinimum();
@@ -24,7 +28,7 @@ public class HeapApplications {
 		// create a heap via a constructor call to the Heap class
 		Heap heap = new Heap();
 		// Insert the first k elements of the array into the heap using a loop
-		for(int i = 0; i < arrayLen; i++) {
+		for(int i = 0; i < k; i++) {
 			heap.insert(array[i]);
 		}
 		// for (i = k to i < arrayLen), do the following:

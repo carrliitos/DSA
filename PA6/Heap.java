@@ -13,17 +13,17 @@ public class Heap {
 	}
 
 	public void deleteMinimum() {
-		heapArray.set(0, heapArray.get(heapArray.size() - 1));
-		heapArray.remove(heapArray.size() - 1);
+		heapArray.set(0, heapArray.get(size() - 1));
+		heapArray.remove(size() - 1);
 		int currentIndex = 0;
 		int leftIndex = 1;
 		int rightIndex = 2;
 
-		while(leftIndex < heapArray.size()) {
+		while(leftIndex < size()) {
 			String currentKey = heapArray.get(currentIndex);
 			String leftKey = heapArray.get(leftIndex);
 
-			if(rightIndex < heapArray.size()) {
+			if(rightIndex < size()) {
 				String rightKey = heapArray.get(rightIndex);
 				if((leftKey.compareTo(currentKey) < 0) 
 					&& (leftKey.compareTo(rightKey) < 0)) {
@@ -48,11 +48,11 @@ public class Heap {
 	}
 
 	public void insert(String value) {
-		int currentIndex = heapArray.size();
+		int currentIndex = size();
 		int parentIndex = (currentIndex - 1) / 2;
-		heapArray.add((heapArray.size() - 1), value);
+		heapArray.add(size(), value);
 
-		while((currentIndex > 0) && (heapArray.get(currentIndex).compareTo(heapArray.get(parentIndex)) < 0)) {
+		while((currentIndex > 0) && (heapArray.get(parentIndex).compareTo(heapArray.get(currentIndex)) > 0)) {
 			swap(parentIndex, currentIndex);
 			currentIndex = parentIndex;
 			heapArray.set(parentIndex, heapArray.get((currentIndex - 1)/2));

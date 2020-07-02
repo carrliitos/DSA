@@ -3,13 +3,15 @@ public class HeapApplications {
 	public static void heapSort(String array[], int arrayLen) throws Exception {
 		Heap heap = new Heap();
 
-		for(int i = 0; i < arrayLen; i++) {
-			heap.insert(array[i]);
+		for(String string : array) {
+			heap.insert(string);
 		}
 
 		for(int i = 0; i < arrayLen; i++) {
 			array[i] = heap.getMinimum();
+			System.out.println("Minimum is got: " + array[i]);
 			heap.deleteMinimum();
+			System.out.println("Minimum deleted.");
 		}
 	}
 
@@ -18,7 +20,7 @@ public class HeapApplications {
 			k = arrayLen;
 		}
 		Heap heap = new Heap();
-		for(int i = 0; i < arrayLen; i++) {
+		for(int i = 0; i < k; i++) {
 			heap.insert(array[i]);
 		}
 		for(int i = k; i < arrayLen; i++) {
