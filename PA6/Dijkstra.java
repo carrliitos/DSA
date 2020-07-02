@@ -38,7 +38,7 @@ public class Dijkstra extends Graph {
 			for(int i = 0; i < outDegree[minVertex]; i++) {
 				Edge adjEdge = adjList.get(minVertex).get(i);
 				int adjVertex = adjEdge.dest;
-				if(!(closed[adjVertex])){
+				if(closed[adjVertex] == false){
 					int newDist = distance[minVertex] + adjEdge.weight;
 					if(distance[adjVertex] == Integer.MAX_VALUE){
 						numOpen++;

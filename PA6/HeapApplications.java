@@ -17,13 +17,10 @@ public class HeapApplications {
 		if(k > arrayLen) {
 			k = arrayLen;
 		}
-
 		Heap heap = new Heap();
-
 		for(int i = 0; i < arrayLen; i++) {
 			heap.insert(array[i]);
 		}
-
 		for(int i = k; i < arrayLen; i++) {
 			String minString = heap.getMinimum();
 			if(minString.compareTo(array[i]) < 0) {

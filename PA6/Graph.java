@@ -20,16 +20,16 @@ public class Graph {
 
 		for(int i = 0; i < numVertices; i++) {
 			outDegree[i] = 0;
-			adjList = new ArrayList<ArrayList<Edge>>();
+			adjList.add(new ArrayList<Edge>());
 		}
 
 		for(int i = 0; i < numEdges; i++) {
-			int src, dest, weight;
-			src = fileReader.nextInt();
-			dest = fileReader.nextInt();
-			weight = fileReader.nextInt();
+			// int src, dest, weight;
+			int src = fileReader.nextInt();
+			int dest = fileReader.nextInt();
+			int weight = fileReader.nextInt();
 			Edge e = new Edge(src, dest, weight);
-			adjList.add(adjList.size() - 1, e);
+			adjList.get(src).add(e);
 			outDegree[src]++;
 		}
 
