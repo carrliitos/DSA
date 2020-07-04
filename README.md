@@ -1,2 +1,2 @@
-# CS223
-Stuff for school (UWWhitewater CS223)
+# DSA
+Stuff for school (UWWhitewater DSA)
