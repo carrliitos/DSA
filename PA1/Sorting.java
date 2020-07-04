@@ -7,10 +7,13 @@ public class Sorting {
 				if(array[next] < array[posMin]) {
 					posMin = next;
 				}
-				int temp = array[posMin];
-				array[posMin] = array[i];
-				array[i] = temp;
+				// int temp = array[posMin];
+				// array[posMin] = array[i];
+				// array[i] = temp;
 			}
+			int temp = array[posMin];
+			array[posMin] = array[i];
+			array[i] = temp;
 		}
 	}
 
