@@ -15,6 +15,7 @@ The algorithms and data structures will be tested in the future.
 - [Data Structures](https://github.com/carrliitos/DSA#data-structures)
 
 ## Data Structures
+- [Array List](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/BCArrayList.java)
 - [Breadth-First Search](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/BFS.java)
 - [Binary Search Tree Appliations](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/BSTApplications.java)
 - [Binary Methods (Merge, Sort, etc.)](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/BinaryMethods.java)
