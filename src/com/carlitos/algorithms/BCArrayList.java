@@ -70,4 +70,65 @@ public class BCArrayList<E> {
 		dataArray[index] = anEntry;
 		size++;
 	}
+
+	/**
+		get(int index) - returns the item at a given index
+	*/
+	public E get(int index) {
+		// check that the given index is in-bounds
+		if(index < 0 || index > size) {
+			throw new ArrayIndexOutOfBoundsException(index);
+		}
+		// return the item
+		return dataArray[index];
+	}
+
+	/**
+		set(int index, E newValue) - Method set inserts the new
+		item (parameter newValue) at the specified index and returns t
+		he value (oldValue) that was previously stored at that index.
+	*/
+	public E set(int index, E newValue) {
+		// check that the given index is in-bounds
+		if(index < 0 || index > size) {
+			throw new IndexOutOfBoundsException(index);
+		}
+		// swap the oldValue with the newValue
+		E oldValue = dataArray[index];
+		dataArray[index] = newValue;
+		// return oldValue
+		return oldValue;
+	}
+
+	/**
+		remove(int index) - removes an item at a given index and shifts the 
+		array elements to close up the gap
+	*/
+	public E remove(int index) {
+		// check to see if the index is in-bounds
+		if(index < 0 || index > size) {
+			throw new ArrayIndexOutOfBoundsException(index);
+		}
+		// initialize/create a returnValue (temp value) equal to the given index to be removed
+		E returnValue = dataArray[index];
+		// use a for-loop to move the array elements forward to close the gap
+		for(int i = index + 1; i < size; i++) {
+			dataArray[i - 1] = dataArray[i];
+		}
+		// decrement the size
+		size--;
+		// return the returnValue
+		return returnValue;
+	}
+
+	/**
+		reallocate() - creates a new array that is twice the size of the current 
+		array and then copies the contents of the current array into the new one.
+	*/
+	private void reallocate() {
+		// double the capacity
+		capacity = 2 * capacity;
+		// copy the array using Arrays.copyOf() method
+		dataArray = Arrays.copyOf(dataArray, capacity);
+	}
 }
