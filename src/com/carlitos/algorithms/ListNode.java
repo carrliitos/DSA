@@ -8,4 +8,4 @@ public class ListNode {
 			value = val;
 			next = null;
 		}
-	}
+}
