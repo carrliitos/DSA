@@ -6,6 +6,6 @@ This repository is a collection of algorithms and data structures I have impleme
 The algorithms and data structures will be tested in the future.
 
 # Created by Benzon Carlitos Salazar
-	* Github: 
-	* LinkedIn: 
-	* Emal:		salazarbc24@uww.edu
+- Github: 
+- LinkedIn: 
+- Emal:		salazarbc24@uww.edu
