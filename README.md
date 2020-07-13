@@ -12,7 +12,8 @@ The algorithms and data structures will be tested in the future.
 
 # What's been implemented:
 ## Table of Contents
-- [Data Structures]()
+- [Data Structures](https://github.com/carrliitos/DSA#data-structures)
+- [Mathematics](https://github.com/carrliitos/DSA#mathematics)
 
 ## Data Structures
 - [Breadth-First Search](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/BFS.java)
@@ -43,3 +44,5 @@ The algorithms and data structures will be tested in the future.
 - [Stack](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/StackExample.java)
 - [Trie](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/Trie.java)
 	- [Trie Node](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/TrieNode.java)
+
+## Mathematics
