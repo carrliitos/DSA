@@ -12,6 +12,9 @@ The algorithms and data structures will be tested in the future.
 
 # What's been implemented:
 ## Table of Contents
+- [Data Structures]()
+
+## Data Structures
 - [Breadth-First Search](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/BFS.java)
 - [Binary Search Tree Appliations](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/BSTApplications.java)
 - [Binary Methods (Merge, Sort, etc.)](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/BinaryMethods.java)
