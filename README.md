@@ -14,3 +14,16 @@ The algorithms and data structures will be tested in the future.
 ## Table of Contents
 - [Breadth-First Search](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/BFS.java)
 - [Binary Search Tree Appliations](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/BSTApplications.java)
+- [Binary Methods (Merge, Sort, etc.)](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/BinaryMethods.java)
+- [Binary Tree](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/BinaryTree.java)
+- [Directed Acyclic Graph](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/DAG.java)
+- [Depth-First Search](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/DFS.java)
+- [Dijkstra's](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/Dijkstra.java)
+- [Graph used for Dijkstra's](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/DijkstraGraph.java)
+- [Dynamic Arrays](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/DynamicArrays.java)
+- [Graphs]
+	- [Edge](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/Edge.java)
+	- [Graph](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/Graph.java)
+- [Hashing](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/Hashing.java)
+- [Heap](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/Heap.java)
+	- [Heap Applications](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/HeapApplications.java)
