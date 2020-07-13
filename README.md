@@ -8,7 +8,7 @@ The algorithms and data structures will be tested in the future.
 ## Created by Benzon Carlitos Salazar
 - Github: 	https://github.com/carrliitos/DSA
 - LinkedIn: https://www.linkedin.com/in/benzoncarlitossalazar/
-- Emal:		salazarbc24@uww.edu
+- Email:		salazarbc24@uww.edu
 
 # What's been implemented:
 ## Table of Contents
