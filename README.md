@@ -33,7 +33,7 @@ The algorithms and data structures will be tested in the future.
 	- [Heap Applications](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/HeapApplications.java)
 - [Insertion Sort](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/InsertionSort.java)
 - Linked List
-	- [List Node](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/BCLinkedList.java)
+	- [List Node](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/BCLinkedList.java#L15)
 	- [Single-Linked List](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/BCLinkedList.java)
 - [Merge Sort](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/Mergesort.java)
 - [Queue](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/Queue.java)
