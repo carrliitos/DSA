@@ -1,3 +1,6 @@
+## Note
+Dijkstra's algorithm is written in JavaScript to be able to use ReactJS for visualization. This implementation still uses the same ideas in my [original dijkstra's algorithm](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/Dijkstra.java) implementation, except of course, this is implemented in JavaScipt.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
