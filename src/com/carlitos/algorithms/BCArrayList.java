@@ -131,4 +131,28 @@ public class BCArrayList<E> {
 		// copy the array using Arrays.copyOf() method
 		dataArray = Arrays.copyOf(dataArray, capacity);
 	}
+
+	public static void main(String[] args) {
+		List<Integer> some = new ArrayList<>();
+		int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		
+		try {
+			System.out.println("Adding: " + Arrays.toString(nums));
+			for (int numsNext : nums) {
+				some.add(numsNext);
+				System.out.println(some);
+			}
+			System.out.println("Complete new array: " + some + "\n");
+
+			System.out.println("Removing every first element of array " + Arrays.toString(nums) + "\n");
+			for (int numsNext : nums) {
+				System.out.println("Removing element " + numsNext);
+				some.remove(0);
+				System.out.println(some);				
+			}
+		}catch(Exception ex) {
+			System.out.println("\nException Error");
+			ex.printStackTrace(System.out);
+		}
+	}
 }
