@@ -11,7 +11,8 @@ The algorithms and data structures will be tested in the future.
 - Email:		salazarbc24@uww.edu
 
 # Visualizations
-- Dijkstra's
+*All insructions to deploy the visualizations are written in their resepctive README.md*
+- [Dijkstra's](https://github.com/carrliitos/DSA/tree/master/visuals/dijkstra)
 
 # What's been implemented:
 ## Table of Contents
