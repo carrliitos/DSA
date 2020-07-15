@@ -10,6 +10,9 @@ The algorithms and data structures will be tested in the future.
 - LinkedIn: https://www.linkedin.com/in/benzoncarlitossalazar/
 - Email:		salazarbc24@uww.edu
 
+# Visualizations
+- Dijkstra's
+
 # What's been implemented:
 ## Table of Contents
 - [Data Structures](https://github.com/carrliitos/DSA#data-structures)
