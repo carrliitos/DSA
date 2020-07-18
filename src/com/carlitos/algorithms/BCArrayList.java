@@ -4,7 +4,9 @@
 	It does not implement the List interface.
 */
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class BCArrayList<E> {
 	// Default initial capacity
@@ -91,7 +93,7 @@ public class BCArrayList<E> {
 	public E set(int index, E newValue) {
 		// check that the given index is in-bounds
 		if(index < 0 || index > size) {
-			throw new IndexOutOfBoundsException(index);
+			throw new IndexOutOfBoundsException(Integer.toString(index));
 		}
 		// swap the oldValue with the newValue
 		E oldValue = dataArray[index];

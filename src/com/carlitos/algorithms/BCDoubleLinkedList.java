@@ -1,17 +1,17 @@
 /** @author Benzon Carlitos Salazar 
- This is the correct (incomplete) implementation of Double-Linked List
+	This is the correct (incomplete) implementation of Double-Linked List
 */
 
 import java.util.*;
 
 /** Class BCDoubleLinkedList implements a double-linked list and
- a ListIterator*/
+	a ListIterator*/
 public class BCDoubleLinkedList<E> {
 	/** We create an inner class of Node
-	 A Node is the building block for a single-linked list
+		A Node is the building block for a single-linked list
 
-	 The keyword static in the class header indicates that the 
-	 Node<E> class will not reference its outer class.
+		The keyword static in the class header indicates that the 
+		Node<E> class will not reference its outer class.
 	*/
 	private static class Node<E> {
 		// Create a reference to the data
@@ -22,7 +22,7 @@ public class BCDoubleLinkedList<E> {
 		private Node<E> prev;
 
 		/** Create a new node constructor with a null next field
-		 @param dataItem - The data stored
+		 	@param dataItem - The data stored
 		*/
 		private Node(E dataItem) {
 			data = dataItem;
@@ -31,8 +31,8 @@ public class BCDoubleLinkedList<E> {
 		}
 
 		/** Create a new node constructor that references another node
-		 @param dataItem - The data stored
-		 @param nodeRef - The node reference by the new node
+		 	@param dataItem - The data stored
+		 	@param nodeRef - The node reference by the new node
 		*/
 		private Node(E dataItem, Node<E> nodeRef) {
 			data = dataItem;
@@ -71,15 +71,15 @@ public class BCDoubleLinkedList<E> {
 		}
 
 		/** Indicate whether the movement forward is defined
-		 @return true if call to next will not throw an exception
+		 	@return true if call to next will not throw an exception
 		*/
 		public boolean hasNext() {
 			return nextItem != null;
 		}
 
 		/** Move the iterator forward and return the next item.
-		 @return the next item in the list
-		 @throws NoSuchElementException if there is no such object
+		 	@return the next item in the list
+		 	@throws NoSuchElementException if there is no such object
 		*/
 		public E next() {
 			if(!hasNext()) {
@@ -92,7 +92,7 @@ public class BCDoubleLinkedList<E> {
 		}
 
 		/** Indicate whether the movement backward is defined
-		 @return true if call to previous will not throw an exception
+		 	@return true if call to previous will not throw an exception
 		*/
 		public boolean hasPrevious() {
 			return (nextItem == null && size != 0)
@@ -100,8 +100,8 @@ public class BCDoubleLinkedList<E> {
 		}
 
 		/** Move the iterator backward and return the previous item.
-		 @return the previous item in the list
-		 @throws NoSuchElementException if there is no such object
+		 	@return the previous item in the list
+		 	@throws NoSuchElementException if there is no such object
 		*/
 		public E previous() {
 			if(!hasPrevious()) {

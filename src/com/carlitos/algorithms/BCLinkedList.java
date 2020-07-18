@@ -1,16 +1,16 @@
 /** @author Benzon Carlitos Salazar
- This is the correct implementation of a single-linked list
+ 	This is the correct implementation of a single-linked list
 */
 
 	/** Class to represent a linked list with a link from each node to the next node.
-	 SingleLinkedList does not implement the List interface.
+	 	SingleLinkedList does not implement the List interface.
 	*/
 public class BCLinkedList<E> {
 	/** We create an inner class of Node
-	 A Node is the building block for a single-linked list
+	 	A Node is the building block for a single-linked list
 
-	 The keyword static in the class header indicates that the 
-	 Node<E> class will not reference its outer class.
+	 	The keyword static in the class header indicates that the 
+	 	Node<E> class will not reference its outer class.
 	*/
 	private static class Node<E> {
 		// Create a reference to the data
@@ -19,7 +19,7 @@ public class BCLinkedList<E> {
 		private Node<E> next;
 		
 		/** Create a new node constructor with a null next field
-		 @param dataItem - The data stored
+		 	@param dataItem - The data stored
 		*/
 		private Node(E dataItem) {
 			data = dataItem;
@@ -27,8 +27,8 @@ public class BCLinkedList<E> {
 		}
 
 		/** Create a new node constructor that references another node
-		 @param dataItem - The data stored
-		 @param nodeRef - The node reference by the new node
+		 	@param dataItem - The data stored
+		 	@param nodeRef - The node reference by the new node
 		*/
 		private Node(E dataItem, Node<E> nodeRef) {
 			data = dataItem;
@@ -42,7 +42,7 @@ public class BCLinkedList<E> {
 	private int size = 0;
 
 	/** Adding an item to the front of the list
-	 @param dataItem - The item to be added
+	 	@param dataItem - The item to be added
 	*/
 	public void addFirst(E dataItem) {
 		// Set head to a new Node with dataItem as the data stored and 
@@ -53,13 +53,13 @@ public class BCLinkedList<E> {
 	}
 
 	/** Adding an item after a specific node
-	 @param node - The node preceding the new item
-	 @param item - The item to insert
+		 @param node - The node preceding the new item
+		 @param item - The item to insert
 	*/
 	private void addAfter(Node<E> node, E item) {
 		/* Point the preceding node's next to the new node and initialize
-		 it to a new node with item as the data and node.next (preceding node's
-		 next) as the new node's next
+			it to a new node with item as the data and node.next (preceding node's
+			next) as the new node's next
 		*/
 		node.next = new Node<>(item, node.next);
 		// Increment the size
@@ -67,8 +67,8 @@ public class BCLinkedList<E> {
 	}
 
 	/** Removes a node afer a given node
-	@param node - The node before the one to be removed
-	@return - The data from the removed node, or null if there is node to remove
+		@param node - The node before the one to be removed
+		@return - The data from the removed node, or null if there is node to remove
 	*/
 	private E removeAfter(Node<E> node) {
 		// Create a temp node and set it to the given node's next
@@ -87,7 +87,7 @@ public class BCLinkedList<E> {
 	}
 
 	/** Removes the head node
-	@return - The removed node's data or null if the list is empty
+		@return - The removed node's data or null if the list is empty
 	*/
 	private E removeFirst() {
 		// set temp node to head
@@ -108,8 +108,8 @@ public class BCLinkedList<E> {
 	}
 
 	/** Finds the node at a specified position
-	@param index - The position of the node we want
-	@return - The node at index or null if it does not exist
+		@param index - The position of the node we want
+		@return - The node at index or null if it does not exist
 	*/
 	private Node<E> getNode(int index) {
 		// Set a placeholder node to the head node
@@ -124,9 +124,9 @@ public class BCLinkedList<E> {
 	}
 
 	/** Get the data at a given index
-	@param index - The position of the data returned
-	@return - The data at index
-	@throws IndexOutOfBoundsException - If index is out of range
+		@param index - The position of the data returned
+		@return - The data at index
+		@throws IndexOutOfBoundsException - If index is out of range
 	*/
 	public E get(int index) {
 		// Make sure that the index is in-bounds
@@ -140,10 +140,10 @@ public class BCLinkedList<E> {
 	}
 
 	/** Store a reference to anEntry in the element at position index
-	@param index - The position of the item to change
-	@param newValue - The new data
-	@return - The data previously at index
-	@throws IndexOutOfBoundsException - If index is out of range
+		@param index - The position of the item to change
+		@param newValue - The new data
+		@return - The data previously at index
+		@throws IndexOutOfBoundsException - If index is out of range
 	*/
 	public E set(int index, E newValue) {
 		// Make sure that the index is in-bounds
@@ -161,9 +161,9 @@ public class BCLinkedList<E> {
 	}
 
 	/** Insert the specified item at given index
-	@param index - The position where item is to be inserted
-	@param item - The item to be inserted
-	@throws IndexOutOfBoundsException - If index is out of range
+		@param index - The position where item is to be inserted
+		@param item - The item to be inserted
+		@throws IndexOutOfBoundsException - If index is out of range
 	*/
 	public void add(int index, E item) {
 		// Make sure the the index is in-bounds
@@ -183,8 +183,8 @@ public class BCLinkedList<E> {
 	}
 
 	/** Appends an item at the end of the list
-	@param item - The item to be appended
-	@return true - if the adding was successful
+		@param item - The item to be appended
+		@return true - if the adding was successful
 	*/
 	public boolean add(E item) {
 		// call the add() method with size and item as arguments
