@@ -10,6 +10,9 @@ The algorithms and data structures will be tested in the future.
 - LinkedIn: https://www.linkedin.com/in/benzoncarlitossalazar/
 - Email:		salazarbc24@uww.edu
 
+### TODO:
+- [ ] Re-implement Double-Linked List to code add() method
+
 # Visualizations
 *All insructions to deploy the visualizations are written in their resepctive README.md*
 - [Dijkstra's](https://github.com/carrliitos/DSA/tree/master/visuals/dijkstra)

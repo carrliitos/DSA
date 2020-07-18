@@ -1,5 +1,5 @@
 /** @author Benzon Carlitos Salazar
- This is my correct implementation of a single-linked list
+ This is the correct implementation of a single-linked list
 */
 
 	/** Class to represent a linked list with a link from each node to the next node.
