@@ -1,6 +1,18 @@
 ## Note
 Dijkstra's algorithm is written in JavaScript to be able to use ReactJS for visualization. This implementation still uses the same ideas in my [original dijkstra's algorithm](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/Dijkstra.java) implementation, except of course, this is implemented in JavaScipt.
 
+#### Start
+![Start](https://github.com/carrliitos/DSA/blob/master/visuals/dijkstra/images/Screenshot%20from%202020-07-17%2016-43-43.png) 
+
+#### Add obstacles
+![Add obstacles](https://github.com/carrliitos/DSA/blob/master/visuals/dijkstra/images/Screenshot%20from%202020-07-17%2016-44-06.png)
+
+#### Observe the algorithm as it finds the shortest path
+![Observe](https://github.com/carrliitos/DSA/blob/master/visuals/dijkstra/images/Screenshot%20from%202020-07-17%2016-44-16.png)
+
+#### Shortest path visualized
+![Shortest path](https://github.com/carrliitos/DSA/blob/master/visuals/dijkstra/images/Screenshot%20from%202020-07-17%2016-44-24.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
