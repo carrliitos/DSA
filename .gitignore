@@ -1,3 +1,5 @@
 *.class
 ./ExamPrep/
 .idea/
+./src/DaStAlgs.iml
+*.json
