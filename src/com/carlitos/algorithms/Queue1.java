@@ -1,9 +1,9 @@
-public class Queue {
+public class Queue1 {
 
 	private int maxQueueSize, front, currentSize;
 	private int[] queue;
 
-	public Queue(int maxQueueSize) throws Exception {
+	public Queue1(int maxQueueSize) throws Exception {
 		if (maxQueueSize <= 0)
 			throw new Exception("Queue size should be a positive integer.");
 		this.maxQueueSize = maxQueueSize;
