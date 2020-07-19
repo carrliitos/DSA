@@ -11,7 +11,13 @@ The algorithms and data structures will be tested in the future.
 - Email:	salazarbc24@uww.edu
 
 ### TODO:
-- [ ] Re-implement Double-Linked List to code add() method
+- [x] Re-implement ArrayList and Arrays
+- [x] Re-implement Double-Linked List to code add() method
+- [ ] Re-implement recursive programs
+- [ ] Re-implement trees
+- [ ] Re-implement Sets and Maps
+- [ ] Re-implement Sorting
+- [ ] Re-implement Graphs
 
 # Visualizations
 *All insructions to deploy the visualizations are written in their resepctive README.md*
