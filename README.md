@@ -13,7 +13,7 @@ The algorithms and data structures will be tested in the future.
 ### TODO:
 - [x] Re-implement ArrayList and Arrays
 - [x] Re-implement Double-Linked List to code add() method
-- [ ] Re-implement recursive programs
+- [x] Re-implement recursive programs
 - [ ] Re-implement trees
 - [ ] Re-implement Sets and Maps
 - [ ] Re-implement Sorting
