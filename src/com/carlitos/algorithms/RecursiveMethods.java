@@ -1,3 +1,16 @@
+/** @author Benzon Carlitos Salazar
+	
+	This class will hold some of the applications of Recursive
+	methods and algorithms. 
+
+	To design a recursive algorithm:
+	1) Recognize the base case and provide a solution to it
+	2) Devise a strategy to split the problem into smaller versions
+	of itself. Each recursive case must make progress towards the base case.
+	3) Combine the solutions to the smaller problems in such a way
+	that each larger problem is solved correctly.
+*/
+
 import java.util.Arrays;
 
 public class RecursiveMethods {
@@ -6,26 +19,31 @@ public class RecursiveMethods {
 		int[] x = {3,7,9,14,15,17,24,81};
 		int yTarget = 14;
 		int[] y = {81,24,17,15,14,9,7,3};
-		// System.out.println("Target: " + target);
-		// System.out.println("");
-		// System.out.println("Linear Search:");
-		// linearSearch(x, target);
-		System.out.println("");
+		int target = 14;
+		int[] array = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+		System.out.println("Target: " + xTarget);
+		System.out.println("==========");
+		System.out.println("Linear Search:");
+		linearSearch(x, xTarget);
+		System.out.println("==========");
 		System.out.println("Binary Search in Ascending Order:");
 		binarySearchAsc(x, xTarget);
-		System.out.println("");
+		System.out.println("==========");
 		System.out.println("Binary Search in Descending Order:");
 		binarySearchDesc(y, yTarget);
+		System.out.println("==========");
+		System.out.println("Regular Binary Search for array: " + Arrays.toString(array));
+		binarySearch(array, target);
 
-		// System.out.println("*** Test Recursion ***\n");
-		// int A[] = { 123076, 689201, 6592073, 12461, 1355171 };
-		// for (int a = 0; a < A.length; a++)
-		// 	System.out.printf("Sum of even digits in %d is %d\n", A[a], sumEvenDigits(A[a]));
-		// int B[] = { 1, 2, 3, 4, 5, 6 };
-		// for (int b = 0; b < B.length; b++) {
-		// 	System.out.printf("\nAll binary strings of length %d that have more ones than zeroes\n", B[b]);
-		// 	binaryStringsWithMoreOnes(B[b]);
-		//}
+		System.out.println("==========\n*** Test Recursion ***\n");
+		int A[] = { 123076, 689201, 6592073, 12461, 1355171 };
+		for (int a = 0; a < A.length; a++)
+			System.out.printf("Sum of even digits in %d is %d\n", A[a], sumEvenDigits(A[a]));
+		int B[] = { 1, 2, 3, 4, 5, 6 };
+		for (int b = 0; b < B.length; b++) {
+			System.out.printf("\nAll binary strings of length %d that have more ones than zeroes\n", B[b]);
+			binaryStringsWithMoreOnes(B[b]);
+		}
 	}
 
 	/* Recursive Linear Array Search
@@ -66,30 +84,30 @@ public class RecursiveMethods {
 	* @param last -- subscript of last element
 	* @return -- subscript of target if found; otherwise, return -1;
 	*/
-	// private static int binarySearch(int[] items, int target, int first, int last) {
-	// 	// Base case 1 -- unsuccessful search
-	// 	if(first > last){
-	// 		System.out.println("Target not in the array.");
-	// 		return -1;
-	// 	}else {
-	// 		int middle = (first + last) / 2; // next probe index
-	// 		if(items[middle] == target) {
-	// 			System.out.println("Found it on index: " + middle);
-	// 			return middle; // Successful base case
-	// 		}else if(target < items[middle]) { // left half
-	// 			System.out.println("Going on the left half.");
-	// 			return binarySearch(items, target, first, middle - 1); // Recursive step				
-	// 		}else{  // right half
-	// 			System.out.println("Going on the right half.");
-	// 			return binarySearch(items, target, middle + 1, last); // recursive step
-	// 		}
-	// 	}
-	// }
+	private static int binarySearch(int[] items, int target, int first, int last) {
+		// Base case 1 -- unsuccessful search
+		if(first > last){
+			System.out.println("Target not in the array.");
+			return -1;
+		}else {
+			int middle = (first + last) / 2; // next probe index
+			if(items[middle] == target) {
+				System.out.println("Found it on index: " + middle);
+				return middle; // Successful base case
+			}else if(target < items[middle]) { // left half
+				System.out.println("Going on the left half.");
+				return binarySearch(items, target, first, middle - 1); // Recursive step				
+			}else{  // right half
+				System.out.println("Going on the right half.");
+				return binarySearch(items, target, middle + 1, last); // recursive step
+			}
+		}
+	}
 
-	// /*binarySearch wrapper*/
-	// public static int binarySearch(int[] items, int target) {
-	// 	return binarySearch(items, target, 0, items.length -1);
-	// }
+	/*binarySearch wrapper*/
+	public static int binarySearch(int[] items, int target) {
+		return binarySearch(items, target, 0, items.length -1);
+	}
 
 	private static int binarySearchAsc(int array[], int key) {
 		int arrayLength = array.length;
