@@ -14,7 +14,7 @@ The algorithms and data structures will be tested in the future.
 - [x] Re-implement ArrayList and Arrays
 - [x] Re-implement Double-Linked List to code add() method
 - [x] Re-implement recursive programs
-- [ ] Re-implement trees
+- [x] Re-implement trees
 - [ ] Re-implement Sets and Maps
 - [ ] Re-implement Sorting
 - [ ] Re-implement Graphs
