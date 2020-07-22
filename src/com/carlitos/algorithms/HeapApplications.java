@@ -1,3 +1,5 @@
+/** @author Benzon Carlitos Salazar */
+
 public class HeapApplications {
 
 	public static void heapSort(String array[], int arrayLen) throws Exception {
