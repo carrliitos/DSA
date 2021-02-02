@@ -3,22 +3,6 @@ All algorithms and data structures are implemented in Java
 
 This repository is a collection of algorithms and data structures I have implemented in my academic (and professional) life. The code is not optimized and some of the implementations are still incorrect and I am currently in the process of correcting and improving them.
 
-The algorithms and data structures will be tested in the future.
-
-## Created by Benzon Carlitos Salazar
-- Github: 	https://github.com/carrliitos/DSA
-- LinkedIn: https://www.linkedin.com/in/benzoncarlitossalazar/
-- Email:	salazarbc24@uww.edu
-
-### TODO:
-- [x] Re-implement ArrayList and Arrays
-- [x] Re-implement Double-Linked List to code add() method
-- [x] Re-implement recursive programs
-- [x] Re-implement trees
-- [ ] Re-implement Sets and Maps
-- [ ] Re-implement Sorting
-- [ ] Re-implement Graphs
-
 # Visualizations
 *All insructions to deploy the visualizations are written in their resepctive README.md*
 - [Dijkstra's](https://github.com/carrliitos/DSA/tree/master/visuals/dijkstra)
@@ -58,3 +42,6 @@ The algorithms and data structures will be tested in the future.
 - [Stack](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/StackExample.java)
 - [Trie](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/Trie.java)
 	- [Trie Node](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/TrieNode.java)
+
+## Resources
+- [Introduction to Algorithms 3rd. Edition](https://edutechlearners.com/download/Introduction_to_algorithms-3rd%20Edition.pdf)
