@@ -12,6 +12,7 @@ This repository is a collection of algorithms and data structures I have impleme
 # What's been implemented:
 ## Table of Contents
 - [Data Structures](https://github.com/carrliitos/DSA#data-structures)
+- [Resources](https://github.com/carrliitos/DSA#resources)
 
 ## Data Structures
 - [Array List](https://github.com/carrliitos/DSA/blob/master/src/com/carlitos/algorithms/BCArrayList.java)
