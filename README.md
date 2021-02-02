@@ -1,4 +1,6 @@
 # Java: Data Structures and Algorithms
+> Benzon Carlitos Salazar
+
 All algorithms and data structures are implemented in Java
 
 This repository is a collection of algorithms and data structures I have implemented in my academic (and professional) life. The code is not optimized and some of the implementations are still incorrect and I am currently in the process of correcting and improving them.
